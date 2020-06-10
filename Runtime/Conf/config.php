@@ -2,38 +2,36 @@
 return array (
   'db_type' => 'mysql',
   'db_host' => 'localhost',
-  'db_name' => 'test_feifeicms41190209',
-  'db_user' => 'root',
-  'db_pwd' => 'root',
+  'db_name' => 'petalmovie',
+  'db_user' => 'petalmovie',
+  'db_pwd' => 'petalmovie',
   'db_port' => '3306',
   'db_prefix' => 'ff_',
   'default_theme' => 'default',
   'default_theme_m' => 'default_m',
-  'site_name' => '飞飞影视导航系统',
-  'site_path' => '/4.1/',
-  'site_domain' => 'www.feifeicms.org',
+  'site_name' => '花瓣影视',
+  'site_path' => '/',
+  'site_domain' => 'www.besoid.com',
   'site_domain_m' => '',
-  'site_title' => '飞飞影视导航系统首页',
-  'site_keywords' => '飞飞影视导航系统,PHP电影程序,电影网站程序',
-  'site_description' => '努力打造飞飞影视导航系统为最好的PHP影视系统!',
-  'site_email' => '110119@qq.com',
-  'site_copyright' => '本网站为非赢利性站点，本网站所有内容均来源于互联网相关站点自动搜索采集信息，相关链接已经注明来源。',
-  'site_hot' => '影片1
-影片2
-影片3
-影片4
-影片5
-影片6||_blank
-影片7
-影片8
-影片9
-影片10
-feifeicms|http://www.feifeicms.org|_blank',
-  'site_tongji' => '<script language="javascript" type="text/javascript" src="http://js.users.51.la/14834816.js"></script>',
-  'site_icp' => 'ICP备2010111号',
+  'site_title' => '花瓣影视——免费在线影视点播',
+  'site_keywords' => '花瓣影视,最新电影,好看的电影,在线观看,电影推荐,免费电影,电影天堂,电影下载,迅雷电影下载',
+  'site_description' => '分享最新电影电视剧！免费在线观看海量高清最新电影图文视频，看电影就上花瓣影视',
+  'site_email' => 'huaban@besoid.com',
+  'site_copyright' => '',
+  'site_hot' => '',
+  'site_tongji' => '<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?93e2cdf17d2be002c126db6050985b1f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>',
+  'site_icp' => '',
   'admin_ads_file' => 'Runtime/Js',
   'admin_order_type' => 'addtime',
-  'tmpl_cache_on' => false,
+  'tmpl_cache_on' => true,
   'data_cache_type' => 'file',
   'cache_foreach' => '0',
   'cache_page_list' => '0',
@@ -79,38 +77,38 @@ img3.doubanio.com',
   'play_height' => '420',
   'play_playad' => 'http://cdn.feifeicms.co/loading/3.0/',
   'play_second' => 10,
-  'play_language' => '国语,英语,粤语,闽南语,韩语,日语,国语/粤语,其它',
-  'play_area' => '大陆,香港,台湾,美国,韩国,日本,泰国,新加坡,马来西亚,印度,英国,法国,加拿大,西班牙,俄罗斯,其它',
-  'play_year' => '2019,2018,2017,2016,2015,2014,2013,2012,2011,2010,2009',
+  'play_language' => '普通话,英语,粤语,韩语,日语,其它',
+  'play_area' => '内地,美国,香港,台湾,日本,韩国,英国,其他',
+  'play_year' => '2020,2019',
   'play_server' => 
   array (
     'down_a' => 'http://downa.feifeicms.org/',
     'down_b' => 'http://downb.feifeicms.org/',
     'down_c' => 'http://downc.feifeicms.org/',
   ),
-  'play_type' => '爱情,动作,喜剧,战争,科幻,剧情,武侠,冒险,枪战,恐怖,微电影,其它',
+  'play_type' => '剧情,喜剧,动作,爱情,科幻,动画,悬疑,惊悚,恐怖,犯罪,同性,音乐,歌舞,传记,历史,战争,西部,奇幻,冒险,灾难,武侠,情色',
   'play_state' => '正片,预告片,花絮',
-  'play_version' => '高清版,剧场版,抢先版,OVA,TV,影院版',
+  'play_version' => '高清版,剧场版',
   'play_jiexi' => '',
   'play_weekday' => '一,二,三,四,五,六,日',
   'collect_original' => false,
   'collect_time' => '1',
   'collect_name' => '0',
   'collect_ips' => '',
-  'collect_hits' => '99',
-  'collect_updown' => '99',
-  'collect_gold' => '9',
-  'collect_golder' => '99',
-  'collect_tags' => '0',
+  'collect_hits' => '0',
+  'collect_updown' => '0',
+  'collect_gold' => '0',
+  'collect_golder' => '0',
+  'collect_tags' => '1',
   'collect_passwd' => '',
-  'collect_forum' => '3000',
+  'collect_forum' => '1',
   'news_type' => '多分类1,多分类2,多分类3,多分类4',
-  'user_second' => '3600',
-  'user_replace' => '她妈|它妈|他妈|你妈|去死|贱人',
+  'user_second' => '5',
+  'user_replace' => '',
   'user_check' => '0',
-  'url_rewrite' => '0',
-  'url_router_on' => '0',
-  'url_html_suffix' => '.html',
+  'url_rewrite' => '1',
+  'url_router_on' => '1',
+  'url_html_suffix' => '',
   'url_html' => '0',
   'url_vod_list' => 'video/{listdir}/{id}-{page}',
   'url_vod_detail' => 'Runtime/{listdir}/{id}/',
@@ -133,15 +131,51 @@ img3.doubanio.com',
   'html_cache_ajax' => '12',
   '_htmls_' => 
   array (
-    'home:index:index' => NULL,
-    'home:vod:type' => NULL,
-    'home:news:type' => NULL,
-    'home:vod:show' => NULL,
-    'home:news:show' => NULL,
-    'home:vod:read' => NULL,
-    'home:news:read' => NULL,
-    'home:vod:play' => NULL,
-    'home:my:show' => NULL,
+    'home:index:index' => 
+    array (
+      0 => '{:action}',
+      1 => 3600,
+    ),
+    'home:vod:type' => 
+    array (
+      0 => '{:module}_{:action}/{$_SERVER.REQUEST_URI|md5}',
+      1 => 1800,
+    ),
+    'home:news:type' => 
+    array (
+      0 => '{:module}_{:action}/{$_SERVER.REQUEST_URI|md5}',
+      1 => 1800,
+    ),
+    'home:vod:show' => 
+    array (
+      0 => '{:module}_{:action}/{$_SERVER.REQUEST_URI|md5}',
+      1 => 5400,
+    ),
+    'home:news:show' => 
+    array (
+      0 => '{:module}_{:action}/{$_SERVER.REQUEST_URI|md5}',
+      1 => 5400,
+    ),
+    'home:vod:read' => 
+    array (
+      0 => '{:module}_{:action}/{id|md5}',
+      1 => 43200,
+    ),
+    'home:news:read' => 
+    array (
+      0 => '{:module}_{:action}/{$_SERVER.REQUEST_URI|md5}',
+      1 => 43200,
+    ),
+    'home:vod:play' => 
+    array (
+      0 => '{:module}_{:action}/{$_SERVER.REQUEST_URI|md5}',
+      1 => 43200,
+    ),
+    'home:my:show' => 
+    array (
+      0 => '{:module}_{:action}/{$_SERVER.REQUEST_URI|md5}',
+      1 => 43200,
+    ),
   ),
   'rewrite_route' => 'list-ename-id-(:letter)===(:letter)/p1
 list-ename-id-(:letter)-p-(:num)===(:letter)/p(:num)
@@ -525,7 +559,13 @@ vod-play-dir-(:letter)-id-(:num)-sid-(:num)-pid-(:num)===(:letter)/(:num)/(:num)
   'user_pay_appkey' => '',
   'user_register_score_pid' => '0',
   'user_register_vipday' => '0',
-  'user_register_welcome' => '',
+  'user_register_welcome' => '亲爱的{username}，欢迎加入{sitename}。
+
+  现在你可以愉快的前往 https://www.besoid.com 看电影啦，若无法点击请复制到浏览器中打开即可。
+  
+  微信搜索并关注我们的公众号“花瓣影视”可以获取更多信息哦！
+  
+  更多交流请加入QQ群866621384。',
   'ui_scenario' => '10',
   'ui_record' => '10',
   'ui_playurl' => '34',
@@ -545,15 +585,15 @@ vod-play-dir-(:letter)-id-(:num)-sid-(:num)-pid-(:num)===(:letter)/(:num)/(:num)
   'pay_wxpay_appid' => '',
   'pay_wxpay_appkey' => '',
   'pay_paypal_account' => '',
-  'wx_check' => '0',
+  'wx_check' => '1',
   'wx_cids' => '',
   'wx_limit' => '',
-  'wx_order' => '',
-  'wx_token' => '',
-  'wx_follow' => '',
-  'wx_none_txt' => '',
-  'wx_none_url' => '',
-  'wx_domain' => '',
+  'wx_order' => 'hits',
+  'wx_token' => 'tina7265217',
+  'wx_follow' => '欢迎关注花瓣影视，回复影片名称即可观看。您也可复制网址www.besoid.com到浏览器内打开。',
+  'wx_none_txt' => '该影片暂未找到，我们会尽快添加！先看看别的吧！观看卡顿请刷新页面或者切换线路，如不能播放请留言具体影片名称，我们会尽快处理。',
+  'wx_none_url' => 'https://www.ipquit.com',
+  'wx_domain' => 'https://www.ipquit.com',
   'wx_jiexi' => '',
   'wx_item' => 
   array (
@@ -573,8 +613,8 @@ vod-play-dir-(:letter)-id-(:num)-sid-(:num)-pid-(:num)===(:letter)/(:num)/(:num)
     array (
     ),
   ),
-  'apikey_keyword' => '',
-  'apikey_douban' => '',
+  'apikey_keyword' => 'bcc1921b5ab8a667',
+  'apikey_douban' => '17ebce73f47f3b0a',
   'pay_card_sell' => '',
   'pay_rj_appid' => '',
   'pay_rj_appkey' => '',
@@ -590,9 +630,10 @@ vod-play-dir-(:letter)-id-(:num)-sid-(:num)-pid-(:num)===(:letter)/(:num)/(:num)
   'play_pause' => '//cdn.feifeicms.co/loading/pause.html',
   'play_live' => '',
   'cache_page_person' => '0',
-  'collect_actor' => '0',
-  'user_email_forum' => '0',
-  'user_email_guestbook' => '0',
-  'user_email_error' => '0',
+  'collect_actor' => '1',
+  'user_email_forum' => '1',
+  'user_email_guestbook' => '1',
+  'user_email_error' => '1',
+  'upload_referer' => '',
 );
 ?>

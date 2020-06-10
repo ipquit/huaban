@@ -20,7 +20,7 @@ return array(
     'miss name for rule'                                            => '参数规则缺少name',
     '{name} require, but miss'                                      => '缺少必要参数{name}',
     'PhalApi_Api::${name} undefined'                                => 'PhalApi_Api::${name} 未定义',
-    'Bad Request: {message}'                                        => '非法请求：{message}',
+    'Bad Request: {message}'                                        => '操作失败：{message}',
     'Interal Server Error: {message}'                               => '服务器运行错误: {message}',
     'Redirect: {message}'                                           => '重定向：{message}',
     "{name}'s enum range can not be empty"                          => '{name}枚举规则中的range不能为空',

@@ -34,7 +34,7 @@
 
         table.render({
             elem: '#currentTableId',
-            url: '/?s=Portal.Plugins.GetMinePlugins', // 换成相应的运营平台接口
+            url: '/api/public/?s=Portal.Plugins.GetMinePlugins', // 换成相应的运营平台接口
             //toolbar: '#toolbarDemo',
             defaultToolbar: ['filter', 'exports', 'print', {
                 title: '提示',
@@ -79,7 +79,7 @@
             if (obj.event === 'edit') {  // 监听添加操作
             	var doInstallFun = function(plugin_key) {
                     $.ajax({
-                        url: '/?s=Portal.Plugins.Install',
+                        url: '/api/public/?s=Portal.Plugins.Install',
                         type:'post',
                         data: {plugin_key: plugin_key},
                         success:function(data){
@@ -118,7 +118,7 @@
             } else if (obj.event == 'uninstall') {
                 layer.confirm(obj.data.plugin_name + "<br/>插件已安装，是否需要狠心卸载？<br/><br/>卸载后会删除安装的插件代码，保留数据库数据及安装包，如有需要可重新安装。", function (index) {
                     $.ajax({
-                        url: '/?s=Portal.Plugins.Uninstall',
+                        url: '/api/public/?s=Portal.Plugins.Uninstall',
                         type:'post',
                         data: {plugin_key: obj.data.plugin_key},
                         success:function(data){

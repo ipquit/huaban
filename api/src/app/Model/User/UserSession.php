@@ -6,7 +6,7 @@ use PhalApi\Model\NotORMModel as NotORM;
 class UserSession extends NotORM {
     
     protected function getTableName($id) {
-        return 'phalapi_user_session';
+        return 'ff_user_session';
     }
     
     /**

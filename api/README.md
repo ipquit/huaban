@@ -15,13 +15,13 @@
 [PhalApi 2.x English Docs](http://docs-en.phalapi.net/#/v2.0/).  
 
 ## 在线示例 / Demo
- + 默认接口服务：[http://demo.phalapi.net/?s=App.Site.Index](http://demo.phalapi.net/?s=App.Site.Index)
+ + 默认接口服务：[http://demo.phalapi.net/api/public/?s=App.Site.Index](http://demo.phalapi.net/api/public/?s=App.Site.Index)
  + 在线接口文档：[http://demo.phalapi.net/docs.php](http://demo.phalapi.net/docs.php)
  + 接口详情文档（以默认接口为例）：[http://demo.phalapi.net/docs.php?service=App.Site.Index&detail=1&type=fold](http://demo.phalapi.net/docs.php?service=App.Site.Index&detail=1&type=fold)
  + **PhalApi创新项目-小白接口**（免费、免开发、直接可用的的云端API）：[https://www.yesapi.cn/](https://www.yesapi.cn/?f=github)
     
   
- + Default API：[http://demo.phalapi.net/?s=App.Site.Index](http://demo.phalapi.net/?s=App.Site.Index)
+ + Default API：[http://demo.phalapi.net/api/public/?s=App.Site.Index](http://demo.phalapi.net/api/public/?s=App.Site.Index)
  + Online API List Document：[http://demo.phalapi.net/docs.php](http://demo.phalapi.net/docs.php)
  + Online API Detail Document：[http://demo.phalapi.net/docs.php?service=App.Site.Index&detail=1&type=fold](http://demo.phalapi.net/docs.php?service=App.Site.Index&detail=1&type=fold)
  + **Innovation project based on PhalApi-YesApi**：[https://www.yesapi.cn/](https://www.yesapi.cn/?f=github)
@@ -121,8 +121,8 @@ At last, add writeable permission to folder ```runtime```. For more detail about
 
 For PhalApi, the default communicate protocol is HTTP/HTTPS. According to the specific implementation of the API service, we could use GET or POST to request. By default, you can specify the ```service``` parameter or ```s``` for short when requesting. The default API service is ```App.Site.Index```.    
 
- + 默认接口：[http://dev.phalapi.net/?s=App.Site.Index](http://dev.phalapi.net/?s=App.Site.Index)  
- + Default API：[http://dev.phalapi.net/?s=App.Site.Index](http://dev.phalapi.net/?s=App.Site.Index)  
+ + 默认接口：[http://dev.phalapi.net/api/public/?s=App.Site.Index](http://dev.phalapi.net/api/public/?s=App.Site.Index)  
+ + Default API：[http://dev.phalapi.net/api/public/?s=App.Site.Index](http://dev.phalapi.net/api/public/?s=App.Site.Index)  
 
 
 

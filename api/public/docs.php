@@ -35,7 +35,7 @@ if (!empty($_GET['language'])) {
 }
 
 $projectName = \PhalApi\T('PhalApi API Framework');
-$docViewCode = ''; // 查看文档密码，为空时不限制
+$docViewCode = '000000'; // 查看文档密码，为空时不限制
 
 $detailTpl = API_ROOT . '/src/view/docs/api_desc_tpl.php';
 $listTpl = API_ROOT . '/src/view/docs/api_list_tpl.php';

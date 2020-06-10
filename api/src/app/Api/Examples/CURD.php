@@ -155,7 +155,7 @@ class CURD extends Api {
         $rs['row_3'] = $domain->getList(3, 1, 5);
 
         // 到这一步，你可以访问当前接口（手动/通过配置开启调试模式）
-        // 浏览器访问：http://localhost/phalapi/public/?s=App.Examples_CURD.SqlDebug&__debug__=1
+        // 浏览器访问：http://localhost/api/public/?s=App.Examples_CURD.SqlDebug&__debug__=1
         // 将会在debug返回字段看到SQL调试信息
 
         // 最后，当sys.notorm_debug和sys.enable_sql_log均开启时，将能在日志文件中纪录sql

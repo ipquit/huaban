@@ -18,7 +18,7 @@ $array = array(
 	'TMPL_ACTION_ERROR'     => './Public/jump/jumpurl.html', // 默认错误跳转对应的模板文件
 	'TMPL_ACTION_SUCCESS'   => './Public/jump/jumpurl.html', // 默认成功跳转对应的模板文件		
 	'DATA_PATH_LEVEL'=>2,
-  'ADMIN_TIME_LIMIT' => '300',
+  'ADMIN_TIME_LIMIT' => '30000',
   'HOME_PAGENUM' => '3',
   'HOME_PAGEGO' => 'pagego',
 	//3.3 add

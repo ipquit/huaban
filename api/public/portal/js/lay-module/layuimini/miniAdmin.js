@@ -44,7 +44,7 @@ layui.define(["jquery", "miniMenu", "miniTab", "miniTheme"], function (exports) 
                 if (data == null || data.ret != 200) {
                     miniAdmin.error(data.msg)
                     if (data.ret == 406) {
-                        window.location = '/portal/page/login-1.html';
+                        window.location = '/api/public/portal/page/login-1.html';
                     }
                 } else {
                     data = data.data

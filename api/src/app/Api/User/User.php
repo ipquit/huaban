@@ -14,16 +14,14 @@ class User extends Api {
     public function getRules() {
         return array(
             'register' => array(
-                'username' => array('name' => 'username', 'require' => true, 'min' => 1, 'max' => 50, 'desc' => '账号，账号需要唯一'),
-                'password' => array('name' => 'password', 'require' => true, 'min' => 6, 'max' => 20, 'desc' => '密码'),
-                'avatar' => array('name' => 'avatar', 'default' => '', 'max' => 500, 'desc' => '头像链接'),
-                'sex' => array('name' => 'sex', 'type' => 'int', 'default' => 0, 'desc' => '性别，1男2女0未知'),
-                'email' => array('name' => 'email', 'default' => '', 'max' => 50, 'desc' => '邮箱'),
-                'mobile' => array('name' => 'mobile', 'default' => '', 'max' => 20, 'desc' => '手机号'),
+                'user_name' => array('name' => 'user_name', 'require' => true, 'min' => 1, 'max' => 20, 'desc' => '账号，账号需要唯一'),
+                'user_pwd' => array('name' => 'user_pwd', 'require' => true, 'min' => 6, 'max' => 30, 'desc' => '密码最少6位'),
+                'user_email' => array('name' => 'user_email', 'default' => '', 'max' => 20, 'desc' => '邮箱'),
+                'user_pid' => array('name' => 'user_pid', 'default' => '1', 'max' => 10, 'desc' => '邀请码'),
             ),
             'login' => array(
-                'username' => array('name' => 'username', 'require' => true, 'min' => 1, 'max' => 50, 'desc' => '账号'),
-                'password' => array('name' => 'password', 'require' => true, 'min' => 6, 'max' => 20, 'desc' => '密码'),
+                'user_name' => array('name' => 'username', 'require' => true, 'min' => 1, 'max' => 20, 'desc' => '账号'),
+                'user_pwd' => array('name' => 'password', 'require' => true, 'min' => 6, 'max' => 30, 'desc' => '密码'),
             ),
             'checkSession' => array(
                 'user_id' => array('name' => 'user_id', 'type' => 'int', 'require' => true, 'desc' => '用户ID'),
@@ -43,18 +41,20 @@ class User extends Api {
      */
     public function register() {
         $domain = new UserDomain();
-        $user = $domain->getUserByUsername($this->username, 'id');
-        if ($user) {
-            throw new BadRequestException($this->username . '账号已注册');
+        $username = $domain->getUserByUsername($this->user_name, 'user_name');
+        if ($username) {
+            throw new BadRequestException($this->user_name . '该用户名已经被注册');
+        }
+        $useremail = $domain->getUserByUseremail($this->user_email, 'user_email');
+        if ($useremail) {
+            throw new BadRequestException($this->user_email . '该邮箱已经被注册');
         }
         
         $moreInfo = array(
-            'avatar' => $this->avatar,
-            'sex' => $this->sex,
-            'email' => $this->email,
-            'mobile' => $this->mobile,
+            'user_email' => $this->user_email,
+            'user_pid' => $this->user_pid,
         );
-        $userId = $domain->register($this->username, $this->password, $moreInfo);
+        $userId = $domain->register($this->user_name, $this->user_pwd, $moreInfo);
         
         return array('user_id' => $userId);
     }
@@ -68,17 +68,17 @@ class User extends Api {
      * @return boolean is_login 是否登录成功
      */
     public function login() {
-        $username = $this->username;   // 账号参数
-        $password = $this->password;   // 密码参数
+        $username = $this->user_name;   // 账号参数
+        $password = $this->user_pwd;   // 密码参数
         
         $domain = new UserDomain();
-        $user = $domain->getUserByUsername($this->username, 'id');
+        $user = $domain->getUserByUsername($this->user_name, 'id');
         if (!$user) {
-            throw new BadRequestException($this->username . '账号不存在');
+            throw new BadRequestException($this->user_name . '账号不存在');
         }
         $user_id = intval($user['id']);
         
-        $is_login = $domain->login($this->username, $this->password);
+        $is_login = $domain->login($this->user_name, $this->user_pwd);
         $token = '';
         if ($is_login) {
             $session = new UserSessionDomain();

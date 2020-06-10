@@ -24,7 +24,7 @@ $jquerycookiePath = '//lib.baomitu.com/jquery-cookie/1.4.1/';
 
     <div class="row" style="margin-top: 60px;"></div>
 
-    <div class="ui text container" style="max-width: none !important;" id="menu_top">
+    <div class="ui text container" style="max-width: none !important;width:1200px;" id="menu_top">
         <div class="ui floating message">
             <?php
             if (!empty($errorMessage)) {

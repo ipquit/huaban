@@ -87,13 +87,13 @@
           "child": [
             {
               "title": "登录-1",
-              "href": "page/login-1.html",
+              "href": "./page/login-1.html",
               "icon": "fa fa-stumbleupon-circle",
               "target": "_blank"
             },
             {
               "title": "登录-2",
-              "href": "page/login-2.html",
+              "href": "./page/login-2.html",
               "icon": "fa fa-viacoin",
               "target": "_blank"
             }
@@ -107,7 +107,7 @@
           "child": [
             {
               "title": "404页面",
-              "href": "page/404.html",
+              "href": "./page/404.html",
               "icon": "fa fa-hourglass-end",
               "target": "_self"
             }

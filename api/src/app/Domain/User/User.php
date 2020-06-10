@@ -13,9 +13,13 @@ use App\Model\User\User as UserModel;
 
 class User {
 
-    public function getUserByUsername($username, $select = '*') {
-        $model = new UserModel();
-        return $model->getDataByUsername($username, $select);
+    public function getUserByUsername($user_name, $select = '*') {
+        $modelUserName = new UserModel();
+        return $modelUserName->getDataByUser_name($user_name, $select);
+    }
+    public function getUserByUseremail($user_email, $select = '*') {
+        $modelUserEmail = new UserModel();
+        return $modelUserEmail->getDataByUser_email($user_email, $select);
     }
     
     /**
@@ -26,13 +30,15 @@ class User {
      * @param array $moreInfo 更多注册信息，必须在数据库表中有此字段
      * @return int 用户id
      */
-    public function register($username, $password, $moreInfo = array()) {
+    public function register($user_name, $user_pwd, $moreInfo = array()) {
         $newUserInfo = $moreInfo;
-        $newUserInfo['username'] = $username;
+        $newUserInfo['user_name'] = $user_name;
 
-        $newUserInfo['salt'] = \PhalApi\Tool::createRandStr(32);
-        $newUserInfo['password'] = $this->encryptPassword($password, $newUserInfo['salt']);
-        $newUserInfo['reg_time'] = $_SERVER['REQUEST_TIME'];
+        // $newUserInfo['salt'] = \PhalApi\Tool::createRandStr(32);
+        $newUserInfo['user_pwd'] = $this->encryptPassword($user_pwd, $newUserInfo['salt']);
+        $newUserInfo['user_jointime'] = $_SERVER['REQUEST_TIME'];
+        $newUserInfo['user_deadtime'] = $newUserInfo['user_jointime'];
+        $newUserInfo['user_logtime'] = $newUserInfo['user_jointime'];
 
         $userModel = new UserModel();
         $id = $userModel->insert($newUserInfo);

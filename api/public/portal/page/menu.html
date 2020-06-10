@@ -55,7 +55,7 @@
             treeIdName: 'authorityId',
             treePidName: 'parentId',
             elem: '#munu-table',
-            url: '/?s=Portal.Page.Menu',
+            url: '/api/public/?s=Portal.Page.Menu',
             page: false,
             parseData: function(res){ //res 即为原始返回的数据
                 return {
@@ -105,7 +105,7 @@
                 layer.confirm("是否确认要删除此菜单？\n\n" + data.authorityName, function (index) {
 
                     $.ajax({
-                        url: '/?s=Portal.Page.DeleteMenu',
+                        url: '/api/public/?s=Portal.Page.DeleteMenu',
                         type:'post',
                         data: {id: obj.data.id},
                         success:function(data){

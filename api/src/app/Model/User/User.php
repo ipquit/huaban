@@ -5,11 +5,11 @@ use PhalApi\Model\DataModel;
 class User extends DataModel {
 
     protected function getTableName($id) {
-        return 'phalapi_user';
+        return 'ff_user';
     }
 
     public function getInfo($userId) {
-        return $this->getORM()->select('*')->where('id = ?', $userId)->fetch();
+        return $this->getORM()->select('*')->where('user_id = ?', $userId)->fetch();
     }
 
     /**
@@ -23,8 +23,8 @@ class User extends DataModel {
         }
 
         $rows =self::getORM()
-            ->select('id,nickname,avatar')
-            ->where('id', $userIds)
+            ->select('user_id,user_name,user_face')
+            ->where('user_id', $userIds)
             ->fetchAll();
 
         foreach ($rows as $row) {

@@ -136,7 +136,7 @@
         form.on('submit(saveBtn)', function (data) {
 
             $.ajax({
-                url: '/?s=Portal.Page.AddNewMenu',
+                url: '/api/public/?s=Portal.Page.AddNewMenu',
                 type:'post',
                 data: data.field,
                 success:function(data){

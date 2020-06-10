@@ -78,7 +78,7 @@
             $ = layui.$;
 
         var id = sessionStorage.getItem('edit_id'); // router.search.id
-        $.getJSON('/?s=Portal.User_User.GetData&id=' + id, function (data) {
+        $.getJSON('/api/public/?s=Portal.User_User.GetData&id=' + id, function (data) {
             if (data.ret != 200 || !data.data.data) {
                 layer.msg(data.msg || '用户不存在或已经删除');
             }
@@ -95,7 +95,7 @@
         //监听提交
         form.on('submit(saveBtn)', function (data) {
             $.ajax({
-                url: '/?s=Portal.User_User.UpdateData',
+                url: '/api/public/?s=Portal.User_User.UpdateData',
                 type:'post',
                 data: {data: JSON.stringify(data.field), id: data.field.id},
                 success:function(data){

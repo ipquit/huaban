@@ -10,7 +10,7 @@ class Site extends Api {
     public function getRules() {
         return array(
             'index' => array(
-                'username'  => array('name' => 'username', 'default' => 'PhalApi', 'desc' => '用户名'),
+                'user_name'  => array('name' => 'user_name', 'default' => 'PhalApi', 'desc' => '用户名'),
             ),
         );
     }
@@ -26,7 +26,7 @@ class Site extends Api {
      */
     public function index() {
         return array(
-            'title' => 'Hello ' . $this->username,
+            'title' => 'Hello ' . $this->user_name,
             'version' => PHALAPI_VERSION,
             'time' => $_SERVER['REQUEST_TIME'],
         );
