@@ -15,9 +15,9 @@ return array(
         'db_master' => array(                       // 服务器标记 / database identify
             'type'      => 'mysql',                 // 数据库类型，暂时只支持：mysql, sqlserver / database type
             'host'      => '127.0.0.1',             // 数据库域名 / database host
-            'name'      => 'phalapi',               // 数据库名字 / database name
-            'user'      => 'root',                  // 数据库用户名 / database user
-            'password'  => '',                      // 数据库密码 / database password
+            'name'      => 'petalmovie',               // 数据库名字 / database name
+            'user'      => 'petalmovie',                  // 数据库用户名 / database user
+            'password'  => 'petalmovie',                      // 数据库密码 / database password
             'port'      => 3306,                    // 数据库端口 / database port
             'charset'   => 'UTF8',                  // 数据库字符集 / database charset
             'pdo_attr_string'   => false,           // 数据库查询结果统一使用字符串，true是，false否

@@ -5,11 +5,9 @@ $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : '';
 $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']) ? 'https://' : 'http://';
 $url = $url . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : 'localhost');
 $url .= trim(substr($_SERVER['SCRIPT_NAME'], 0, strrpos($_SERVER['SCRIPT_NAME'], '/') + 1), '.');
-$semanticPath = '/semantic/'; // 本地
-if (substr(PHP_SAPI, 0, 3) == 'cli') {
-    $semanticPath = 'https://cdn.bootcss.com/semantic-ui/2.2.2/';
-}
-
+$semanticPath = '//lib.baomitu.com/semantic-ui/latest/'; // 本地
+$jqueryPath = '//lib.baomitu.com/jquery/3.5.0/';
+$jquerycookiePath = '//lib.baomitu.com/jquery-cookie/1.4.1/';
 $whoami = \PhalApi\DI()->admin->check(false) ? \PhalApi\DI()->admin->username : \PhalApi\T('Sign In');
 $suffixTitle = \PhalApi\T('Online API Docs');
 
@@ -27,8 +25,8 @@ echo <<<EOT
     <link rel="stylesheet" href="{$semanticPath}components/label.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
-    <script src="/static/jquery.min.js"></script>
-    <script src="/static/jquery.cookie.min.js"></script>
+    <script src="{$jqueryPath}jquery.min.js"></script>
+    <script src="{$jquerycookiePath}jquery.cookie.min.js"></script>
 </head>
 
 <body>

@@ -13,8 +13,9 @@
  -->
 
 <?php
-$semanticPath = 'https://cdn.bootcss.com/semantic-ui/2.2.2/'; // cdn
-$semanticPath = '/semantic/'; // 本地
+$semanticPath = '//lib.baomitu.com/semantic-ui/latest/';
+$jqueryPath = '//lib.baomitu.com/jquery/3.5.0/';
+$jquerycookiePath = '//lib.baomitu.com/jquery-cookie/1.4.1/';
 ?>
 
 <head>
@@ -27,9 +28,8 @@ $semanticPath = '/semantic/'; // 本地
     <link rel="stylesheet" href="<?php echo $semanticPath; ?>components/message.min.css">
     <link rel="stylesheet" href="<?php echo $semanticPath; ?>components/label.min.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-
-    <script src="/static/jquery.min.js"></script>
-    <script src="/static/jquery.cookie.min.js"></script>
+    <script src="<?php echo $jqueryPath; ?>jquery.min.js"></script>
+    <script src="<?php echo $jquerycookiePath; ?>jquery.cookie.min.js"></script>
     
         
     <style type="text/css">
